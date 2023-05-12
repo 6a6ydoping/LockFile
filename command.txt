@@ -1,0 +1,7 @@
+-- encrypt
+-- decrypt
+-- gen-key
+-- help
+-- list-algos
+-- list-models [??]
+-- check
