@@ -5,11 +5,13 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 )
 
 var (
 	name string
+	red  = color.BgRed
 )
 
 // helloCmd represents the hello command
@@ -26,7 +28,10 @@ to quickly create a Cobra application.`,
 		if name == "" {
 			fmt.Println("hello")
 		} else {
-			fmt.Println("hello " + name)
+			//colorPrint.PrintWarning("hello " + name)
+			Writer.PrintWarning("hello" + name)
+			Writer.PrintError("in the working copy of 'cmd/decrypt.go', LF will be replaced by CRLF the next time Git touches it")
+			Writer.PrintMessage("hello " + name)
 		}
 	},
 }

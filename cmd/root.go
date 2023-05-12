@@ -4,6 +4,7 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
+	"LockFile/colorPrint"
 	"os"
 
 	"github.com/spf13/cobra"
@@ -33,7 +34,11 @@ func Execute() {
 	}
 }
 
+var Writer colorPrint.Writer
+
 func init() {
+	Writer = colorPrint.Writer{}
+	Writer.SetDefaultMessages()
 	// Here you will define your flags and configuration settings.
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
