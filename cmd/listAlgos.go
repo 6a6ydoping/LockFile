@@ -12,13 +12,8 @@ import (
 // listAlgosCmd represents the listAlgos command
 var listAlgosCmd = &cobra.Command{
 	Use:   "listAlgos",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Lists available encryption algorithms.",
+	Long:  `This command lists the available encryption algorithms supported by the LockFile project. It provides a list of encryption algorithms that can be used with the encrypt and decrypt commands.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("listAlgos called")
 	},

@@ -12,13 +12,8 @@ import (
 // decryptCmd represents the decrypt command
 var decryptCmd = &cobra.Command{
 	Use:   "decrypt",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Decrypts an encrypted file using algorithm and key.",
+	Long:  `This command allows you to decrypt an encrypted file using the corresponding decryption algorithm and key. It takes the encrypted file path, decryption algorithm, decryption key, and output file path as arguments. The command decrypts the input file and saves the decrypted version to the output file.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("decrypt called")
 	},

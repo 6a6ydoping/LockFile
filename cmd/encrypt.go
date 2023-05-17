@@ -12,13 +12,8 @@ import (
 // encryptCmd represents the encrypt command
 var encryptCmd = &cobra.Command{
 	Use:   "encrypt",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Encrypts a file using specified algorithm and key.",
+	Long:  `This command allows you to encrypt a file using a specified encryption algorithm and key. It takes the input file path, encryption algorithm, encryption key, and output file path as arguments. The command encrypts the input file and saves the encrypted version to the output file.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("encrypt called")
 	},
